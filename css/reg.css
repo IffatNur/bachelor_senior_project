@@ -1,0 +1,39 @@
+
+div.head{
+    justify-content: center;
+    
+    margin: 0%;
+    padding:20px;
+    color: black; 
+    display: flex;
+}
+nav{
+    background-image: linear-gradient(gray,white,gray);
+    font-size: 20px;
+}
+
+.container {
+  width: 500px;
+  margin: 50px;
+  padding: 0 50px 0 50px;
+  color: white;
+}
+
+.container input {
+   
+  width: 100%;
+  clear: both;
+  margin: 2px 0 10px 0;
+}
+label{
+    font-size: 20px;
+}
+button{
+    margin-top: 50px;
+}
+input{
+    padding: 7px;
+}
+span{
+    color: rgb(30, 255, 0);
+}

@@ -1,0 +1,29 @@
+.col-lg-2{
+    margin-top: 50px;
+    text-align: center;
+    
+}
+
+.row{
+    justify-content: center;
+   
+}
+a{
+    text-decoration: none;
+}
+img{
+    border-radius: 50%;
+
+}
+h3{
+    margin: 20px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   
+
+}
+

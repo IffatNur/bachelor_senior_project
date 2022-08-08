@@ -1,0 +1,55 @@
+
+    div.head {
+        justify-content: center;
+        margin: 0%;
+        padding: 20px;
+        color: black;
+        display: flex;
+    }
+
+    nav {
+        background-image: linear-gradient(gray, white, gray);
+        font-size: 20px;
+    }
+
+    form.login {
+        background-image: linear-gradient(to top left, navy, orange);
+        text-align: left;
+        display: inline-block;
+        font-size: 20px;
+        padding: 30px;
+        margin: 100px 0 0 500px;
+        border-radius: 5px;
+        border-color: solid;
+        color: white;
+    }
+
+    a:hover {
+        background-color: white;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    input,
+    label {
+        text-align: center;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 60px;
+        color: white;
+        animation: mymove 6s infinite;
+    }
+
+    @keyframes mymove {
+        50% {
+            box-shadow: 10px 20px 30px navy;
+        }
+    }
+   
+    

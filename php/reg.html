@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reg.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.js">
+    <title>Chittagong Independent University</title>
+</head>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('front.jpg');">
+    <div class="head" style="background-color: rgb(3, 3, 88);">
+        <img src="ciulogo.png" alt="" width="120" height="100" class="d-inline-block align-text-left"
+            style="padding-left: 5px; padding-top: 0%; margin-top: 0px;">
+        <div style="color: white;">
+            <h1>Chittagong Independent University</h1>
+            <p style="padding: 5px;">Lord Advance Me In Knowledge</p>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><b> Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><b> Course Available</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><b> Course Reg.</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><b> Home</b></a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="width: 600px;">
+        <form name="form1" class="red" action="reg.php" method="POST">
+            <h2 style="text-align: center;"> Registration</h2>
+            <label>Enter Your Full Name</label>
+            <input type="text" id="name" name="name"  placeholder="Full Name" required><br />
+            <label>Enter Your ID</label>
+            <input type="number" id="id" name="id" placeholder="1710XXXX" required><br />
+
+            <label>Password<span id="psw"></span></label>
+            <input type="password" id="password" name="password" placeholder="Password" 
+            
+            required><br />
+            
+            <label>Email</label>
+            <input type="text" id="email" name="email" placeholder="email@yahoo.com" required><br />
+            <label>Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="01xxxxxxxxx" required><br />
+            <label>Full Address</label>
+            <input type="text" id="address" name="address" placeholder="Type here..." required> <br />
+            
+            <button class="btn-primary" type="submit"
+             onclick="ValidateEmail(document.form1.email),phonenumber(document.form1.phone)">Submit</button>
+            <button class="btn-primary" type="reset">Reset</button>
+        </form>
+    </div>
+    <script>
+        function ValidateEmail(inputText) {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (inputText.value.match(mailformat)) {
+                document.form1.email.focus();
+                return true;
+            }
+            else {
+                alert("You have entered an invalid email address!");
+                document.form1.email.focus();
+                return false;
+            }
+        }
+        function phonenumber(inputtxt) {
+            var phoneno = /^\d{11}$/;
+            if (inputtxt.value.match(phoneno)) {
+                return true;
+            }
+            else {
+                alert("Not a valid Phone Number");
+                return false;
+            }
+        }
+        var myInput = document.getElementById("password")
+        myInput.onkeyup = function(){
+            document.getElementById('psw').innerHTML = "  (atleast 1 capital letter,aleast 1 digit should contain)";
+        }
+        myInput.onblur = function () {
+                document.getElementById('psw').style.display = "none";
+        }
+       
+    </script>
+        
+   
+</body>
+</html>

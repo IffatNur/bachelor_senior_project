@@ -1,0 +1,33 @@
+.logo{
+    padding-left: 15%;
+     
+    
+}
+.logo img{padding-left: 35%;
+}
+
+.nav{font-family:inherit;
+    font-size: 25px;
+color: black;
+    padding-left: 1%;
+}
+.nav1{font-family:inherit;
+    font-size:25px;
+color: black;
+padding-left:10%;}
+.box{ background-image:url(stuloginmain.jpg);
+   width=100%;
+    height:750px;
+}
+.box1{
+    height: 500px;
+    width:500px;
+    background-color: darkslategray;
+    margin:70px auto;
+    opacity:.8;
+   padding: 20px;
+}
+.login{margin: auto 70px;}
+input{
+    height:30px;
+width:300px;

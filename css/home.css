@@ -1,0 +1,64 @@
+*{
+  box-sizing: border-box;
+}
+
+div.head{
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(3, 3, 88);
+    margin: 0%;
+    padding:20px;
+    color: black; 
+    display: flex;
+}
+h5 {
+  text-align: center;
+}
+
+.card-group {
+  margin: 20px;
+  justify-content: center;
+}
+.card {
+  background-image: linear-gradient(rgb(236, 173, 56),white,rgb(236, 173, 56));
+  margin: 15px;
+  padding: 15px;
+}
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+}
+a:hover{
+  background-color: rgba(255, 255, 255, 0.6);
+}
+p{
+  text-align: left;
+  padding: 0 0 100px 100px;
+  width: 50%;
+  color: gainsboro;
+  font-size: 20px;
+}
+div.container{
+  background-color: white;
+  width: 200px;
+  height: 200px;
+}
+h2{
+  color: black;
+  font-style: italic;
+  text-align: center; 
+  background-image: radial-gradient(white,gray,gray);
+  padding: 8px;
+  margin: 20px 0 0 0;
+}
+.top-left {
+  position: absolute;
+  top: 30%;
+  bottom: 50%;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="advising.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="js/index.js">
+    <title>Chittagong Independent University</title>
+
+</head>
+
+<body style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('front.jpg');">
+    <div class="head" style="background-color: rgb(3, 3, 88);">
+        <img src="ciulogo.png" alt="" width="120" height="100" class="d-inline-block align-text-left"
+            style="padding-left: 5px; padding-top: 0%; margin-top: 0px;">
+        <div style="color: white;">
+            <h1>Chittagong Independent University</h1>
+            <p style="padding: 5px;">Lord Advance Me In Knowledge</p>
+        </div>
+    </div>
+
+    <div class="head" style="padding: 0%;">
+        <marquee behavior="scroll" width="100%" direction="left" height="60px" scrollamount="10"
+            style="font-size: 25px;background-image: linear-gradient(gray,white,gray);padding: 10px;">
+            Admission For Autumn21 is Open Now. Please Login For Course Registration.
+        </marquee>
+    </div>
+    <form name="form1" class="login" action="login.php" method="POST" style="margin-top:50px;margin-bottom: 50px;">
+        <h2> login</h2>
+        <label for="id" style="padding: 0 62px 5px 0;">ID</label>
+        <input type="varchar" name="id" placeholder="17XXXXXX"
+            style="padding: 5px;width: 300px; margin: 20px 0 5px 0;"><br>
+
+        <label for="name" style="padding: 0 2px 5px 0;">Password</label>
+        <input type="text" name="username" style="padding: 5px;width: 300px; margin: 20px 0 5px 0;"><br>
+
+        <input type="submit" value="login" style="padding: 5px; width: 200px; font-size: 20px;border-radius: 5px; 
+                background-image: linear-gradient(gray,white,gray);">
+
+        <input type="reset" value="Cancel" style="padding: 5px; width: 200px; font-size: 20px;border-radius: 5px; 
+                background-image: linear-gradient(gray,white,gray);">
+        <p>Don't have an account? <a href="reg.php"> Registration </a></p>
+
+    </form>
+    <script>
+    function ValidateId(inputId) {
+
+        var Idformat = /^\d{8}$/;
+        if (inputId.value.match(Idformat)) {
+            document.form1.id.focus();
+            return true;
+        } else {
+            alert("You have entered an invalid ID!");
+            document.form1.id.focus();
+            return false;
+        }
+    }
+
+    function verifyPassword() {
+        var pw = document.form1.getElementsByName("password").value;
+        //check empty password field
+        if (pw == "") {
+            document.form1.getElementById("message").innerHTML = "**Fill the password please!";
+            return false;
+        }
+
+        //minimum password length validation
+        if (pw.length < 8) {
+            document.form1.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";
+            return false;
+        }
+
+        //maximum length of password validation
+        if (pw.length > 15) {
+            document.form1.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";
+            return false;
+        } else {
+            alert("Password is correct");
+        }
+    }
+
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+    </script>
+</body>
+
+</html>
